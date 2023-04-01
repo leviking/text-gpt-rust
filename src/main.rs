@@ -105,7 +105,7 @@ async fn main() -> std::io::Result<()> {
             .route("/echo/reversed", web::post().to(echo_reversed))
             .route("/sms", web::post().to(handle_sms))
     })
-    .bind("127.0.0.1:3000")?
+    .bind("0.0.0.0:3000")?
     .run()
     .await
 }
